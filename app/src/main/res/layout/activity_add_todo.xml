@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddTodo">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".09"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add todo"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:lineHeight="21sp"
+            android:padding="20dp"
+            android:background="#D93BC9"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:id="@+id/main_display"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="40dp"
+        app:layout_constraintHeight_percent=".71"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/edt_1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/add_item_card"
+            android:hint="@string/to_do_name"
+            android:lineHeight="22dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/edt_2"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:hint="@string/to_do_description"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineHeight="22dp"
+            android:padding="10dp"
+            android:layout_height="70dp"
+            android:background="@drawable/add_item_card"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineHeight="22dp"
+            android:padding="10dp"
+            android:layout_height="70dp"
+            android:background="@drawable/add_item_card"/>
+        <EditText
+            android:id="@+id/edt_3"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:hint="@string/to_do_create_date"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineHeight="22dp"
+            android:padding="10dp"
+            android:layout_height="70dp"
+            android:background="@drawable/add_item_card"/>
+        <EditText
+            android:id="@+id/edt_4"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:hint="@string/to_do_deadline"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:lineHeight="22dp"
+            android:padding="10dp"
+            android:layout_height="70dp"
+            android:background="@drawable/add_item_card"
+            tools:targetApi="p" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintTop_toBottomOf="@id/main_display"
+        tools:layout_editor_absoluteX="0dp"
+        android:gravity="right|center_vertical"
+        android:paddingEnd="40dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_1"
+            android:layout_width="167dp"
+            android:layout_height="75dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/save"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="#D93BC9"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
